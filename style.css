@@ -1,0 +1,37 @@
+body, html{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-image: url(https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1011930.jpg?etag=C30AFAB173E51916C3065F1E2782048D);
+    height: 160px;
+    background-size: cover;
+}
+
+main{
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.data {
+    display: flex;
+    width: 1000px;
+    max-width: 90%;
+    margin: 25px auto;
+}
+
+canvas {
+    justify-content: space-between;
+    width: 50%;
+}
+
+article {
+    margin: 20px 0;
+}
+
+th, td {
+    text-align: right !important;
+}
