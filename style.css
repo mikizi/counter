@@ -8,8 +8,7 @@ header {
     background-color: black;
     height: 200px;
     background-repeat: space;
-    background-attachment: fixed;
-    background-position: center;
+    background-position: top;
 }
 
 main{
