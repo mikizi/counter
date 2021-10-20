@@ -8,7 +8,8 @@ const sum = {
   capacity: 0,
   free: 0,
   counter: 0
-}
+};
+const searchParams = new URLSearchParams(location.search);
 
 const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
 
@@ -19,8 +20,22 @@ function filterGates(gate) {
 
 }
 
+function setLastUpdate(lastUpdate){
+  const [date, time] = lastUpdate.split(' ');
+
+  const timeEl = document.querySelector('#last-update .time');
+  const dateEl = document.querySelector('#last-update .date');
+
+  dateEl.textContent = date;
+  timeEl.textContent = time;
+}
+
 function handleData(index) {
-  data.areas[index].forEach(area => {
+  const {values, date} = data.areas[index];
+
+  setLastUpdate(date);
+
+  values.forEach(area => {
     const {capacity, name, free} = area;
     const taken = capacity - free;
 
@@ -40,8 +55,10 @@ function handleData(index) {
     sum.counter += taken;
   })
 
-  console.table(sum);
-  console.table(consoleData);
+  if(searchParams.get("debug")) {
+    console.table(sum);
+    console.table(consoleData);
+  }
 }
 
 function printSummery(){
@@ -99,7 +116,8 @@ function setHeaderImage(device){
 }
 
 function init(){
-  handleData(0);
+  const latestData = data.areas.length - 1;
+  handleData(latestData);
   printSummery();
 
   const device = isMobile() ? 'mobile' : 'desktop';
@@ -143,7 +161,7 @@ function loadData(){
   script.onload = function () {
     init();
   };
-  const searchParams = new URLSearchParams(location.search);
+
   const page = searchParams.get('p');
 
   script.src = `data/${page}.js`;

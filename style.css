@@ -6,7 +6,7 @@ body, html{
 
 header {
     background-color: black;
-    height: 150px;
+    height: 200px;
     background-repeat: space;
     background-attachment: fixed;
     background-position: center;
@@ -57,12 +57,20 @@ th, td {
     text-align: right !important;
 }
 
+div#last-update {
+    border-radius: 10px;
+    font-size: 0.8em;
+    margin: 8px;
+    direction: rtl;
+}
+
 @media (max-width: 640px){
     header{
         background-size: cover;
         background-attachment: inherit;
         background-position-y: center;
         padding-bottom: 30px;
+        height: 150px;
     }
 
     .grid-wrp, .data.area {
@@ -74,4 +82,11 @@ th, td {
         width: 75%;
     }
 
+    div#last-update {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 5px;
+
+    }
 }
