@@ -5,9 +5,11 @@ body, html{
 }
 
 header {
-    background-image: url(https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1011930.jpg?etag=C30AFAB173E51916C3065F1E2782048D);
-    height: 160px;
-    background-size: cover;
+    background-color: black;
+    height: 150px;
+    background-repeat: space;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 main{
@@ -20,8 +22,27 @@ main{
     display: flex;
     width: 1000px;
     max-width: 90%;
-    margin: 25px auto;
+    margin: 0 auto;
 }
+
+.data.total{
+    display: none;
+}
+
+article.grid-wrp {
+    direction: ltr;
+}
+
+.data-total {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.data-total div {
+    text-align: center;
+}
+
 
 canvas {
     justify-content: space-between;
@@ -29,9 +50,28 @@ canvas {
 }
 
 article {
-    margin: 20px 0;
+    margin: 0;
 }
 
 th, td {
     text-align: right !important;
+}
+
+@media (max-width: 640px){
+    header{
+        background-size: cover;
+        background-attachment: inherit;
+        background-position-y: center;
+        padding-bottom: 30px;
+    }
+
+    .grid-wrp, .data.area {
+        display: none ;
+    }
+
+    .data.total{
+        display: block;
+        width: 75%;
+    }
+
 }
