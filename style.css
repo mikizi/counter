@@ -19,13 +19,22 @@ main{
 
 .data {
     display: flex;
-    width: 1000px;
     max-width: 90%;
     margin: 0 auto;
 }
 
+article.charts {
+    display: flex;
+    width: 80%;
+    margin: 15px auto;
+}
+
+.data.area {
+    width: 50%;
+}
+
 .data.total{
-    display: none;
+    width: 25%;
 }
 
 article.grid-wrp {

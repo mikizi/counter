@@ -123,22 +123,22 @@ function init(){
   const device = isMobile() ? 'mobile' : 'desktop';
   setHeaderImage(device);
 
-  if(device === 'mobile'){
-    printCharts({
-                  type: 'doughnut',
-                  data: {
-                    labels: [ 'כמה כרטיסים נמכרו', 'כמות כסאות פנויים'],
-                    datasets: [{
-                      label: 'מידע לפי אתר לאן',
-                      data: [sum.counter, sum.free],
-                      backgroundColor: [
-                        'rgba(255, 206, 86, 1)',
-                        'rgb(16,14,7)',
-                      ]
-                    }]
-                  }
-                },'total-chart');
-  }else{
+  printCharts({
+                type: 'doughnut',
+                data: {
+                  labels: [ 'כמה כרטיסים נמכרו', 'כמות כסאות פנויים'],
+                  datasets: [{
+                    label: 'מידע לפי אתר לאן',
+                    data: [sum.counter, sum.free],
+                    backgroundColor: [
+                      'rgba(255, 206, 86, 1)',
+                      'rgb(16,14,7)',
+                    ]
+                  }]
+                }
+              },'total-chart');
+
+  if(device === 'desktop'){
     printData();
     printCharts({
                   type: 'bar',
