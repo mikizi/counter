@@ -31,7 +31,12 @@ function setLastUpdate(lastUpdate){
 }
 
 function handleData(index) {
-  const {values, date} = data.areas[index];
+  const {date} = data.areas[index];
+  let {values} = data.areas[index];
+
+  if(typeof values === 'string'){
+    values = JSON.parse(values);
+  }
 
   setLastUpdate(date);
 
