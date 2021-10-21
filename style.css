@@ -17,28 +17,46 @@ main{
     width: 100%;
 }
 
-.data {
-    display: flex;
-    max-width: 90%;
-    margin: 0 auto;
+article {
+    margin: 0;
+}
+
+th, td {
+    text-align: right !important;
 }
 
 article.charts {
     display: flex;
     width: 80%;
     margin: 15px auto;
+    justify-content: space-between;
 }
 
-.data.area {
+.chart {
+    display: flex;
+    max-width: 90%;
+}
+
+.chart.area {
+    width: 38%;
+}
+
+.chart.total{
+    width: 20%;
+}
+
+.chart.trend{
+    width: 38%;
+}
+
+canvas {
     width: 50%;
-}
-
-.data.total{
-    width: 25%;
 }
 
 article.grid-wrp {
     direction: ltr;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .data-total {
@@ -51,26 +69,21 @@ article.grid-wrp {
     text-align: center;
 }
 
-
-canvas {
-    justify-content: space-between;
-    width: 50%;
-}
-
-article {
-    margin: 0;
-}
-
-th, td {
-    text-align: right !important;
-}
-
 div#last-update {
     border-radius: 10px;
     font-size: 0.8em;
     margin: 8px;
     direction: rtl;
 }
+
+/*
+.data.trend {
+    position: relative;
+    bottom: -200px;
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+}*/
 
 @media (max-width: 640px){
     header{
@@ -81,11 +94,11 @@ div#last-update {
         height: 150px;
     }
 
-    .grid-wrp, .data.area {
+    .grid-wrp, .chart.area, .chart.trend {
         display: none ;
     }
 
-    .data.total{
+    .chart.total{
         display: block;
         width: 90%;
     }
@@ -95,6 +108,9 @@ div#last-update {
         bottom: 10px;
         right: 10px;
         padding: 5px;
+    }
 
+    article.charts{
+        justify-content: center;
     }
 }

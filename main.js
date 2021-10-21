@@ -1,14 +1,21 @@
 const consoleData = [], res = [];
-const   areasData = {
+const areasData = {
   taken: [],
   name: [],
-  free: []
+  free: [],
+
 };
 const sum = {
   capacity: 0,
   free: 0,
   counter: 0
 };
+
+const trend = {
+  taken: [],
+  date: []
+}
+
 const searchParams = new URLSearchParams(location.search);
 
 const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
@@ -120,9 +127,23 @@ function setHeaderImage(device){
   headerEl.style.backgroundImage = `url('${data.bg[device]}')`;
 }
 
+function takenOverTime(){
+  data.areas.map(area => {
+    let taken = 0;
+    const values = typeof area.values === 'string' ?  JSON.parse(area.values) : area.values;
+    values.forEach((gate) =>  {
+      taken += (gate.capacity - gate.free)
+    } )
+    trend.date.push(area.date)
+    trend.taken.push(taken)
+  })
+  console.log(trend);
+}
+
 function init(){
   const latestData = data.areas.length - 1;
   handleData(latestData);
+  takenOverTime();
   printSummery();
 
   const device = isMobile() ? 'mobile' : 'desktop';
@@ -142,6 +163,20 @@ function init(){
                   }]
                 }
               },'total-chart');
+
+  printCharts({
+                type: 'line',
+                data: {
+                  labels: trend.date,
+                  datasets: [{
+                    label: 'קצב מכירת כרטיסים',
+                    data: [...trend.taken, sum.capacity],
+                    backgroundColor: [
+                      'rgb(16,14,7)',
+                    ]
+                  }]
+                }
+              },'trend-chart');
 
   if(device === 'desktop'){
     printData();
