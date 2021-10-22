@@ -21,13 +21,17 @@ const searchParams = new URLSearchParams(location.search);
 const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
 
 function filterGates(gate) {
+  if(!data.closedGates){
+    return;
+  }
+
   return gate > 500
          || gate.indexOf('תא תקשורת') > -1
-         || gate === 'E'
+         || gate === 'E' || data.closedGates.some((cGate) => cGate === gate)
 
 }
 
-function setLastUpdate(lastUpdate){
+function setLastUpdate(lastUpdate) {
   const [date, time] = lastUpdate.split(' ');
 
   const timeEl = document.querySelector('#last-update .time');
@@ -41,7 +45,7 @@ function handleData(index) {
   const {date} = data.areas[index];
   let {values} = data.areas[index];
 
-  if(typeof values === 'string'){
+  if (typeof values === 'string') {
     values = JSON.parse(values);
   }
 
@@ -51,7 +55,7 @@ function handleData(index) {
     const {capacity, name, free} = area;
     const taken = capacity - free;
 
-    if(filterGates(name)){
+    if (filterGates(name)) {
       return;
     }
 
@@ -67,13 +71,13 @@ function handleData(index) {
     sum.counter += taken;
   })
 
-  if(searchParams.get("debug")) {
+  if (searchParams.get("debug")) {
     console.table(sum);
     console.table(consoleData);
   }
 }
 
-function printSummery(){
+function printSummery() {
   const el = document.querySelector('.data-total');
   el.insertAdjacentHTML('afterbegin',
                         `<div class="data-wrp">
@@ -90,11 +94,11 @@ function printSummery(){
             </div>`)
 }
 
-function isMobile(){
+function isMobile() {
   return window.matchMedia("only screen and (max-width: 760px)").matches;
 }
 
-function printData(){
+function printData() {
   /*const {capacity, counter, free} = sum;
   new gridjs.Grid({
                     columns: labels,
@@ -103,44 +107,49 @@ function printData(){
                     ]
                   }).render(document.getElementById("table-total"));*/
 
-new gridjs.Grid({
+  new gridjs.Grid({
                     columns: labels.reverse(),
                     data: res,
-                  sort: true,
-                  search: {
-                    enabled: true
-                  },
-                  pagination: {
-                    enabled: true,
-                    limit: 10
-                  }
+                    sort: true,
+                    search: {
+                      enabled: true
+                    },
+                    pagination: {
+                      enabled: true,
+                      limit: 10
+                    }
                   }).render(document.getElementById("table-area"));
 }
 
-function printCharts(data, container){
+function printCharts(data, container) {
   var ctx = document.getElementById(container).getContext('2d');
   new Chart(ctx, data);
 }
 
-function setHeaderImage(device){
+function setHeaderImage(device) {
   const headerEl = document.querySelector('header');
   headerEl.style.backgroundImage = `url('${data.bg[device]}')`;
 }
 
-function takenOverTime(){
+function takenOverTime() {
   data.areas.map(area => {
     let taken = 0;
-    const values = typeof area.values === 'string' ?  JSON.parse(area.values) : area.values;
-    values.forEach((gate) =>  {
+    const values = typeof area.values === 'string' ? JSON.parse(area.values) : area.values;
+    values.forEach((gate) => {
+      if (filterGates(gate.name)) {
+        return;
+      }
+
       taken += (gate.capacity - gate.free)
-    } )
+    });
+
     trend.date.push(area.date)
     trend.taken.push(taken)
   })
   console.log(trend);
 }
 
-function init(){
+function init() {
   const latestData = data.areas.length - 1;
   handleData(latestData);
   takenOverTime();
@@ -152,7 +161,7 @@ function init(){
   printCharts({
                 type: 'doughnut',
                 data: {
-                  labels: [ 'כמה כרטיסים נמכרו', 'כמות כסאות פנויים'],
+                  labels: ['כמה כרטיסים נמכרו', 'כמות כסאות פנויים'],
                   datasets: [{
                     label: 'מידע לפי אתר לאן',
                     data: [sum.counter, sum.free],
@@ -162,7 +171,7 @@ function init(){
                     ]
                   }]
                 }
-              },'total-chart');
+              }, 'total-chart');
 
   printCharts({
                 type: 'line',
@@ -170,15 +179,15 @@ function init(){
                   labels: trend.date,
                   datasets: [{
                     label: 'קצב מכירת כרטיסים',
-                    data: [...trend.taken, sum.capacity],
+                    data: [...trend.taken],
                     backgroundColor: [
                       'rgb(16,14,7)',
                     ]
                   }]
                 }
-              },'trend-chart');
+              }, 'trend-chart');
 
-  if(device === 'desktop'){
+  if (device === 'desktop') {
     printData();
     printCharts({
                   type: 'bar',
@@ -192,11 +201,11 @@ function init(){
                       ],
                     }]
                   }
-                },'gate-chart');
+                }, 'gate-chart');
   }
 }
 
-function loadData(){
+function loadData() {
   const script = document.createElement('script');
   script.onload = function () {
     init();
