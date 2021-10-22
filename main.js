@@ -214,6 +214,7 @@ function loadData() {
   const page = searchParams.get('p');
 
   script.src = `data/${page}.js`;
+  mixpanel.track('page view', {page });
 
   document.head.appendChild(script);
 }
