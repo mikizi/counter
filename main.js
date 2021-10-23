@@ -16,6 +16,8 @@ const trend = {
   date: []
 }
 
+let page;
+
 const searchParams = new URLSearchParams(location.search);
 
 const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
@@ -32,18 +34,28 @@ function filterGates(gate) {
 }
 
 function setLastUpdate(lastUpdate) {
+  if(!lastUpdate){
+    return;
+  }
+
   const [date, time] = lastUpdate.split(' ');
 
-  const timeEl = document.querySelector('#last-update .time');
-  const dateEl = document.querySelector('#last-update .date');
+  const layout = ` <span class="title"> עדכון אחרון :</span>
+            <span class="time">${time}</span>
+            <span class="date">${date}</span>`;
 
-  dateEl.textContent = date;
-  timeEl.textContent = time;
+  const lastUpdateEl = document.querySelector('#last-update');
+  lastUpdateEl.insertAdjacentHTML('afterbegin', layout);
+
 }
 
 function handleData(index) {
   const {date} = data.areas[index];
-  let {values} = data.areas[index];
+  let {values } = data.areas[index];
+
+  if(!values){
+    values = data.areas;
+  }
 
   if (typeof values === 'string') {
     values = JSON.parse(values);
@@ -128,13 +140,24 @@ function printCharts(data, container) {
 
 function setHeaderImage(device) {
   const headerEl = document.querySelector('header');
-  headerEl.style.backgroundImage = `url('${data.bg[device]}')`;
+  headerEl.addEventListener('click', ()=>{
+    window.location.href =  [window.location.origin, window.location.pathname].join('');
+  })
+  headerEl.classList.add(page);
+  if(data.bg) {
+    headerEl.style.backgroundImage = `url('${data.bg[device]}')`;
+  }
 }
 
 function takenOverTime() {
   data.areas.map(area => {
     let taken = 0;
-    const values = typeof area.values === 'string' ? JSON.parse(area.values) : area.values;
+    let values = typeof area.values === 'string' ? JSON.parse(area.values) : area.values;
+
+    if(!values){
+      values = area.areas;
+    }
+
     values.forEach((gate) => {
       if (filterGates(gate.name)) {
         return;
@@ -149,7 +172,16 @@ function takenOverTime() {
   console.log(trend);
 }
 
-function init() {
+function init(){
+  if(page === 'homepage'){
+    initHp();
+  }else{
+    initPage();
+  }
+
+}
+
+function initPage() {
   const latestData = data.areas.length - 1;
   const dataIndex = searchParams.get('i');
   const index = dataIndex ? latestData -  dataIndex : latestData;
@@ -207,15 +239,36 @@ function init() {
   }
 }
 
+function initHp(){
+  const [nav] = document.getElementsByTagName('nav');
+  nav.insertAdjacentHTML('afterbegin', getNavBarLayout());
+
+}
+
+function getNavBarLayout() {
+  return data.map( page =>{
+    let dateHtml = '';
+    if(page.date){
+      const dateStr = page.date.toLocaleDateString('he').replace(',', '');
+      dateHtml = page.date ? ` <div class="date">(${dateStr})</div>` : '';
+    }
+
+    return `<a href="?p=${page.name}" class="game">
+                <h2>${page.title}</h2>${dateHtml}
+            </a>`
+  }).join('');
+}
+
+
 function loadData() {
   const script = document.createElement('script');
+  page = searchParams.get('p') || 'homepage';
+  script.src = `data/${page}.js`;
+
   script.onload = function () {
     init();
   };
 
-  const page = searchParams.get('p');
-
-  script.src = `data/${page}.js`;
   mixpanel.track('page view', {page });
 
   document.head.appendChild(script);

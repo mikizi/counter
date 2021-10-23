@@ -9,16 +9,18 @@ header {
     height: 200px;
     background-repeat: space;
     background-position: top;
+    background-image: url("./assets/logo.png");
 }
+
 
 main{
     margin: 0 auto;
-    padding: 10px 0;
     width: 100%;
 }
 
 article {
     margin: 0;
+    padding: 10px;
 }
 
 th, td {
@@ -30,6 +32,29 @@ article.charts {
     width: 80%;
     margin: 15px auto;
     justify-content: space-between;
+}
+
+nav a.game {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin: 0;
+}
+
+nav a.game h2{
+    margin: 0;
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: 500;
+    display: inline-block;
+}
+
+nav a.game .date{
+    font-size: 0.8em;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .chart {
@@ -90,8 +115,8 @@ div#last-update {
         background-size: cover;
         background-attachment: inherit;
         background-position-y: center;
-        padding-bottom: 30px;
-        height: 150px;
+        height: 180px;
+        background-image: url("./assets/bg.png");
     }
 
     .grid-wrp, .chart.area, .chart.trend {
