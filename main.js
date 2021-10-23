@@ -1,98 +1,99 @@
-const consoleData = [], res = [];
-const areasData = {
-  taken: [],
-  name: [],
-  free: [],
+try {
+  const consoleData = [], res = [];
+  const areasData = {
+    taken: [],
+    name: [],
+    free: [],
 
-};
-const sum = {
-  capacity: 0,
-  free: 0,
-  counter: 0
-};
+  };
+  const sum = {
+    capacity: 0,
+    free: 0,
+    counter: 0
+  };
 
-const trend = {
-  taken: [],
-  date: []
-}
-
-let page;
-
-const searchParams = new URLSearchParams(location.search);
-
-const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
-
-function filterGates(gate) {
-  if(!data.closedGates){
-    return;
+  const trend = {
+    taken: [],
+    date: []
   }
 
-  return gate > 500
-         || gate.indexOf('תא תקשורת') > -1
-         || gate === 'E' || data.closedGates.some((cGate) => cGate === gate)
+  let page;
 
-}
+  const searchParams = new URLSearchParams(location.search);
 
-function setLastUpdate(lastUpdate) {
-  if(!lastUpdate){
-    return;
-  }
+  const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
 
-  const [date, time] = lastUpdate.split(' ');
-
-  const layout = ` <span class="title"> עדכון אחרון :</span>
-            <span class="time">${time}</span>
-            <span class="date">${date}</span>`;
-
-  const lastUpdateEl = document.querySelector('#last-update');
-  lastUpdateEl.insertAdjacentHTML('afterbegin', layout);
-
-}
-
-function handleData(index) {
-  const {date} = data.areas[index];
-  let {values } = data.areas[index];
-
-  if(!values){
-    values = data.areas;
-  }
-
-  if (typeof values === 'string') {
-    values = JSON.parse(values);
-  }
-
-  setLastUpdate(date);
-
-  values.forEach(area => {
-    const {capacity, name, free} = area;
-    const taken = capacity - free;
-
-    if (filterGates(name)) {
+  function filterGates(gate) {
+    if (!data.closedGates) {
       return;
     }
 
-    consoleData.push({name, capacity, free, taken})
-    res.push([name, capacity, free, taken].reverse())
+    return gate > 500
+           || gate.indexOf('תא תקשורת') > -1
+           || gate === 'E' || data.closedGates.some((cGate) => cGate === gate)
 
-    areasData.taken.push(taken);
-    areasData.free.push(free);
-    areasData.name.push(name);
-
-    sum.capacity += capacity;
-    sum.free += free;
-    sum.counter += taken;
-  })
-
-  if (searchParams.get("debug")) {
-    console.table(sum);
-    console.table(consoleData);
   }
-}
 
-function printSummery() {
-  const el = document.querySelector('.data-total');
-  el.insertAdjacentHTML('afterbegin',
-                        `<div class="data-wrp">
+  function setLastUpdate(lastUpdate) {
+    if (!lastUpdate) {
+      return;
+    }
+
+    const [date, time] = lastUpdate.split(' ');
+
+    const layout = ` <span class="title"> עדכון אחרון :</span>
+            <span class="time">${time}</span>
+            <span class="date">${date}</span>`;
+
+    const lastUpdateEl = document.querySelector('#last-update');
+    lastUpdateEl.insertAdjacentHTML('afterbegin', layout);
+
+  }
+
+  function handleData(index) {
+    const {date} = data.areas[index];
+    let {values} = data.areas[index];
+
+    if (!values) {
+      values = data.areas;
+    }
+
+    if (typeof values === 'string') {
+      values = JSON.parse(values);
+    }
+
+    setLastUpdate(date);
+
+    values.forEach(area => {
+      const {capacity, name, free} = area;
+      const taken = capacity - free;
+
+      if (filterGates(name)) {
+        return;
+      }
+
+      consoleData.push({name, capacity, free, taken})
+      res.push([name, capacity, free, taken].reverse())
+
+      areasData.taken.push(taken);
+      areasData.free.push(free);
+      areasData.name.push(name);
+
+      sum.capacity += capacity;
+      sum.free += free;
+      sum.counter += taken;
+    })
+
+    if (searchParams.get("debug")) {
+      console.table(sum);
+      console.table(consoleData);
+    }
+  }
+
+  function printSummery() {
+    const el = document.querySelector('.data-total');
+    el.insertAdjacentHTML('afterbegin',
+                          `<div class="data-wrp">
                 <div class="title">תכולת כסאות ביציע</div>
                 <h2 class="capacity">${sum.capacity}</h2>
             </div>
@@ -104,177 +105,179 @@ function printSummery() {
                 <div class="title">כמות כסאות פנויים</div>
                 <h2 class="free">${sum.free}</h2>
             </div>`)
-}
-
-function isMobile() {
-  return window.matchMedia("only screen and (max-width: 760px)").matches;
-}
-
-function printData() {
-  /*const {capacity, counter, free} = sum;
-  new gridjs.Grid({
-                    columns: labels,
-                    data: [
-                      [capacity, counter, free]
-                    ]
-                  }).render(document.getElementById("table-total"));*/
-
-  new gridjs.Grid({
-                    columns: labels.reverse(),
-                    data: res,
-                    sort: true,
-                    search: {
-                      enabled: true
-                    },
-                    pagination: {
-                      enabled: true,
-                      limit: 10
-                    }
-                  }).render(document.getElementById("table-area"));
-}
-
-function printCharts(data, container) {
-  var ctx = document.getElementById(container).getContext('2d');
-  new Chart(ctx, data);
-}
-
-function setHeaderImage(device) {
-  const headerEl = document.querySelector('header');
-  headerEl.addEventListener('click', ()=>{
-    window.location.href =  [window.location.origin, window.location.pathname].join('');
-  })
-  headerEl.classList.add(page);
-  if(data.bg) {
-    headerEl.style.backgroundImage = `url('${data.bg[device]}')`;
   }
-}
 
-function takenOverTime() {
-  data.areas.map(area => {
-    let taken = 0;
-    let values = typeof area.values === 'string' ? JSON.parse(area.values) : area.values;
+  function isMobile() {
+    return window.matchMedia("only screen and (max-width: 760px)").matches;
+  }
 
-    if(!values){
-      values = area.areas;
+  function printData() {
+    /*const {capacity, counter, free} = sum;
+    new gridjs.Grid({
+                      columns: labels,
+                      data: [
+                        [capacity, counter, free]
+                      ]
+                    }).render(document.getElementById("table-total"));*/
+
+    new gridjs.Grid({
+                      columns: labels.reverse(),
+                      data: res,
+                      sort: true,
+                      search: {
+                        enabled: true
+                      },
+                      pagination: {
+                        enabled: true,
+                        limit: 10
+                      }
+                    }).render(document.getElementById("table-area"));
+  }
+
+  function printCharts(data, container) {
+    var ctx = document.getElementById(container).getContext('2d');
+    new Chart(ctx, data);
+  }
+
+  function setHeaderImage(device) {
+    const headerEl = document.querySelector('header');
+    headerEl.addEventListener('click', () => {
+      window.location.href = [window.location.origin, window.location.pathname].join('');
+    })
+    headerEl.classList.add(page);
+    if (data.bg) {
+      headerEl.style.backgroundImage = `url('${data.bg[device]}')`;
     }
+  }
 
-    values.forEach((gate) => {
-      if (filterGates(gate.name)) {
-        return;
+  function takenOverTime() {
+    data.areas.map(area => {
+      let taken = 0;
+      let values = typeof area.values === 'string' ? JSON.parse(area.values) : area.values;
+
+      if (!values) {
+        values = area.areas;
       }
 
-      taken += (gate.capacity - gate.free)
-    });
+      values.forEach((gate) => {
+        if (filterGates(gate.name)) {
+          return;
+        }
 
-    trend.date.push(area.date)
-    trend.taken.push(taken)
-  })
-  console.log(trend);
-}
+        taken += (gate.capacity - gate.free)
+      });
 
-function init(){
-  if(page === 'homepage'){
-    initHp();
-  }else{
-    initPage();
+      trend.date.push(area.date)
+      trend.taken.push(taken)
+    })
+    console.log(trend);
   }
 
-}
-
-function initPage() {
-  const latestData = data.areas.length - 1;
-  const dataIndex = searchParams.get('i');
-  const index = dataIndex ? latestData -  dataIndex : latestData;
-  handleData(index);
-  takenOverTime();
-  printSummery();
-
-  const device = isMobile() ? 'mobile' : 'desktop';
-  setHeaderImage(device);
-
-  printCharts({
-                type: 'doughnut',
-                data: {
-                  labels: ['כמה כרטיסים נמכרו', 'כמות כסאות פנויים'],
-                  datasets: [{
-                    label: 'מידע לפי אתר לאן',
-                    data: [sum.counter, sum.free],
-                    backgroundColor: [
-                      'rgba(255, 206, 86, 1)',
-                      'rgb(16,14,7)',
-                    ]
-                  }]
-                }
-              }, 'total-chart');
-
-  printCharts({
-                type: 'line',
-                data: {
-                  labels: trend.date,
-                  datasets: [{
-                    label: 'קצב מכירת כרטיסים',
-                    data: [...trend.taken],
-                    backgroundColor: [
-                      'rgb(16,14,7)',
-                    ]
-                  }]
-                }
-              }, 'trend-chart');
-
-  if (device === 'desktop') {
-    printData();
-    printCharts({
-                  type: 'bar',
-                  data: {
-                    labels: areasData.name,
-                    datasets: [{
-                      label: 'כמה כרטיסים נשארו לפי יציע',
-                      data: areasData.free,
-                      backgroundColor: [
-                        'rgba(255, 206, 86, 1)',
-                      ],
-                    }]
-                  }
-                }, 'gate-chart');
-  }
-}
-
-function initHp(){
-  const [nav] = document.getElementsByTagName('nav');
-  nav.insertAdjacentHTML('afterbegin', getNavBarLayout());
-
-}
-
-function getNavBarLayout() {
-  return data.map( page =>{
-    let dateHtml = '';
-    if(page.date){
-      const dateStr = page.date.toLocaleDateString('he').replace(',', '');
-      dateHtml = page.date ? ` <div class="date">(${dateStr})</div>` : '';
+  function init() {
+    if (page === 'homepage') {
+      initHp();
+    } else {
+      initPage();
     }
 
-    return `<a href="?p=${page.name}" class="game">
+  }
+
+  function initPage() {
+    const latestData = data.areas.length - 1;
+    const dataIndex = searchParams.get('i');
+    const index = dataIndex ? latestData - dataIndex : latestData;
+    handleData(index);
+    takenOverTime();
+    printSummery();
+
+    const device = isMobile() ? 'mobile' : 'desktop';
+    setHeaderImage(device);
+
+    printCharts({
+                  type: 'doughnut',
+                  data: {
+                    labels: ['כמה כרטיסים נמכרו', 'כמות כסאות פנויים'],
+                    datasets: [{
+                      label: 'מידע לפי אתר לאן',
+                      data: [sum.counter, sum.free],
+                      backgroundColor: [
+                        'rgba(255, 206, 86, 1)',
+                        'rgb(16,14,7)',
+                      ]
+                    }]
+                  }
+                }, 'total-chart');
+
+    printCharts({
+                  type: 'line',
+                  data: {
+                    labels: trend.date,
+                    datasets: [{
+                      label: 'קצב מכירת כרטיסים',
+                      data: [...trend.taken],
+                      backgroundColor: [
+                        'rgb(16,14,7)',
+                      ]
+                    }]
+                  }
+                }, 'trend-chart');
+
+    if (device === 'desktop') {
+      printData();
+      printCharts({
+                    type: 'bar',
+                    data: {
+                      labels: areasData.name,
+                      datasets: [{
+                        label: 'כמה כרטיסים נשארו לפי יציע',
+                        data: areasData.free,
+                        backgroundColor: [
+                          'rgba(255, 206, 86, 1)',
+                        ],
+                      }]
+                    }
+                  }, 'gate-chart');
+    }
+  }
+
+  function initHp() {
+    const [nav] = document.getElementsByTagName('nav');
+    nav.insertAdjacentHTML('afterbegin', getNavBarLayout());
+
+  }
+
+  function getNavBarLayout() {
+    return data.map(page => {
+      let dateHtml = '';
+      if (page.date) {
+        const dateStr = page.date.toLocaleDateString('he').replace(',', '');
+        dateHtml = page.date ? ` <div class="date">(${dateStr})</div>` : '';
+      }
+
+      return `<a href="?p=${page.name}" class="game">
                 <h2>${page.title}</h2>${dateHtml}
             </a>`
-  }).join('');
+    }).join('');
+  }
+
+  function loadData() {
+    const script = document.createElement('script');
+    page = searchParams.get('p') || 'homepage';
+    script.src = `data/${page}.js`;
+
+    script.onload = function () {
+      init();
+    };
+
+    mixpanel.track('page view', {page});
+
+    document.head.appendChild(script);
+  }
+
+  loadData();
+}catch (ex){
+  mixpanel.track('error', {error: ex.message, stack: ex.stack});
 }
-
-
-function loadData() {
-  const script = document.createElement('script');
-  page = searchParams.get('p') || 'homepage';
-  script.src = `data/${page}.js`;
-
-  script.onload = function () {
-    init();
-  };
-
-  mixpanel.track('page view', {page });
-
-  document.head.appendChild(script);
-}
-
-loadData();
 
 
 
