@@ -151,7 +151,9 @@ function takenOverTime() {
 
 function init() {
   const latestData = data.areas.length - 1;
-  handleData(latestData);
+  const dataIndex = searchParams.get('i');
+  const index = dataIndex ? latestData -  dataIndex : latestData;
+  handleData(index);
   takenOverTime();
   printSummery();
 
