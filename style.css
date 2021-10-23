@@ -20,7 +20,6 @@ main{
 
 article {
     margin: 0;
-    padding: 10px;
 }
 
 th, td {
@@ -30,7 +29,7 @@ th, td {
 article.charts {
     display: flex;
     width: 80%;
-    margin: 15px auto;
+    margin: 0 auto;
     justify-content: space-between;
 }
 
