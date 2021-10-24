@@ -1,25 +1,26 @@
 try {
-  const consoleData = [], res = [];
-  const areasData = {
+  consoleData = [];
+  res = [];
+  areasData = {
     taken: [],
     name: [],
     free: [],
 
   };
-  const sum = {
+  sum = {
     capacity: 0,
     free: 0,
     counter: 0
   };
 
-  const trend = {
+  trend = {
     taken: [],
     date: []
   }
 
   let page;
 
-  const searchParams = new URLSearchParams(location.search);
+  let searchParams = new URLSearchParams(location.search);
 
   const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
 
@@ -32,6 +33,15 @@ try {
            || gate.indexOf('תא תקשורת') > -1
            || gate === 'E' || data.closedGates.some((cGate) => cGate === gate)
 
+  }
+
+  function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
 
   function setLastUpdate(lastUpdate) {
@@ -84,10 +94,10 @@ try {
       sum.counter += taken;
     })
 
-    if (searchParams.get("debug")) {
+   /* if (searchParams && searchParams.get("debug")) {
       console.table(sum);
       console.table(consoleData);
-    }
+    }*/
   }
 
   function printSummery() {
@@ -184,9 +194,9 @@ try {
 
   function initPage() {
     const latestData = data.areas.length - 1;
-    const dataIndex = searchParams.get('i');
-    const index = dataIndex ? latestData - dataIndex : latestData;
-    handleData(index);
+    /*const dataIndex = searchParams && searchParams.get('i');
+    const index = dataIndex ? latestData - dataIndex : latestData;*/
+    handleData(latestData);
     takenOverTime();
     printSummery();
 
@@ -260,9 +270,15 @@ try {
     }).join('');
   }
 
+
   function loadData() {
     const script = document.createElement('script');
-    page = searchParams.get('p') || 'homepage';
+
+    try {
+      page = searchParams.get('p') || 'homepage';
+    }catch(ex){
+        page = getParameterByName('p') || 'homepage';
+    }
     script.src = `data/${page}.js`;
 
     script.onload = function () {
