@@ -31,7 +31,7 @@ try {
 
     return gate > 500
            || gate.indexOf('תא תקשורת') > -1
-           || gate === 'E' || data.closedGates.some((cGate) => cGate === gate)
+           || gate === 'E' || data.closedGates.some((cGate) => cGate == gate)
 
   }
 
@@ -151,9 +151,9 @@ try {
 
   function setHeaderImage(device) {
     const headerEl = document.querySelector('header');
-    headerEl.addEventListener('click', () => {
+    /*headerEl.addEventListener('click', () => {
       window.location.href = [window.location.origin, window.location.pathname].join('');
-    })
+    })*/
     headerEl.classList.add(page);
     if (data.bg) {
       headerEl.style.backgroundImage = `url('${data.bg[device]}')`;

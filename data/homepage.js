@@ -13,4 +13,9 @@ const data = [
     title: 'מכבי נתניה - הפועל באר שבע',
     date: new Date(2021, 10, 30)
   },
+  {
+    name: 'm-pt',
+    title: 'מכבי נתניה - מכבי פ״ת',
+    date: new Date(2021, 11, 27)
+  },
 ];
