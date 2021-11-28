@@ -18,4 +18,9 @@ const data = [
     title: 'מכבי נתניה - מכבי פ״ת',
     date: new Date(2021, 11, 27)
   },
+  {
+    name: 'ashdod',
+    title: 'מכבי נתניה - מ.ס אשדוד',
+    date: new Date(2021, 11, 30)
+  },
 ];
