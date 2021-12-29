@@ -33,4 +33,9 @@ const data = [
     title: 'מכבי נתניה - הפועל חיפה',
     date: new Date(2021, 12, 21)
   },
+  {
+    name: 'b-jslm',
+    title: 'מכבי נתניה - בית"ר ירושלים',
+    date: new Date(2022, 1, 1)
+  },
 ];
