@@ -285,7 +285,9 @@ try {
       init();
     };
 
-    mixpanel.track('page view', {page});
+    if(location.href.indexOf('localhost') < 0) {
+      mixpanel.track('page view', {page});
+    }
 
     document.head.appendChild(script);
   }
