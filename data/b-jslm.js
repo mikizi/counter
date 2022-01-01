@@ -19,7 +19,7 @@ var data = {
     mobile: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1006157.jpg?etag=02333E2177EF53E20898498E00721884",
     desktop: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1006155.jpg?etag=B7136FF9288CE06008EEF617260CEBA3"
   },
-  closedGates: [209,109]
+  closedGates: [209,109,201,101]
 }
 
 // https://www.leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94%20-%20%20%d7%91%d7%99%d7%aa'%d7%a8%20%d7%99%d7%a8%d7%95%d7%a9%d7%9c%d7%99%d7%9d/2022-1-1_19.50/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94?hallmap
