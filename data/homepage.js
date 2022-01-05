@@ -38,4 +38,9 @@ const data = [
     title: 'מכבי נתניה - בית"ר ירושלים',
     date: new Date(2022, 0, 1)
   },
+  {
+    name: 'h-hadera',
+    title: 'הפועל חדרה - מכבי נתניה',
+    date: new Date(2022, 0, 9)
+  },
 ];
