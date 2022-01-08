@@ -43,4 +43,9 @@ const data = [
     title: 'הפועל חדרה - מכבי נתניה',
     date: new Date(2022, 0, 9)
   },
+  {
+    name: 'h-b7-cup',
+    title: 'מכבי נתניה - הפועל באר שבע (גביע)',
+    date: new Date(2022, 0, 12)
+  },
 ];
