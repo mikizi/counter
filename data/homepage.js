@@ -48,4 +48,9 @@ const data = [
     title: 'מכבי נתניה - הפועל באר שבע (גביע)',
     date: new Date(2022, 0, 12)
   },
+  {
+    name: 'sakhnin',
+    title: 'מכבי נתניה - בני סכנין',
+    date: new Date(2022, 0, 17),
+  },
 ];
