@@ -53,4 +53,9 @@ const data = [
     title: 'מכבי נתניה - בני סכנין',
     date: new Date(2022, 0, 17),
   },
+  {
+    name: 'm-tlv',
+    title: 'מכבי ת״א - מכבי נתניה',
+    date: new Date(2022, 0, 22),
+  },
 ];
