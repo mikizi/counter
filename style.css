@@ -2,10 +2,11 @@ body, html{
     width: 100%;
     padding: 0;
     margin: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
 header {
-    background-color: black;
+    background-color: #ffde14;
     height: 200px;
     background-repeat: space;
     background-position: top;
@@ -116,7 +117,11 @@ div#last-update {
         background-attachment: inherit;
         background-position-y: center;
         height: 180px;
-        background-image: url("./assets/bg.png");
+        background-image: url("./assets/bg1.png");
+    }
+
+    .hp header{
+        height: 350px;
     }
 
     .grid-wrp, .chart.area, .chart.trend {

@@ -93,11 +93,6 @@ try {
       sum.free += free;
       sum.counter += taken;
     })
-
-   /* if (searchParams && searchParams.get("debug")) {
-      console.table(sum);
-      console.table(consoleData);
-    }*/
   }
 
   function printSummery() {
@@ -122,15 +117,7 @@ try {
   }
 
   function printData() {
-    /*const {capacity, counter, free} = sum;
-    new gridjs.Grid({
-                      columns: labels,
-                      data: [
-                        [capacity, counter, free]
-                      ]
-                    }).render(document.getElementById("table-total"));*/
-
-    new gridjs.Grid({
+        new gridjs.Grid({
                       columns: labels.reverse(),
                       data: res,
                       sort: true,
@@ -151,9 +138,7 @@ try {
 
   function setHeaderImage(device) {
     const headerEl = document.querySelector('header');
-    /*headerEl.addEventListener('click', () => {
-      window.location.href = [window.location.origin, window.location.pathname].join('');
-    })*/
+
     headerEl.classList.add(page);
     if (data.bg) {
       headerEl.style.backgroundImage = `url('${data.bg[device]}')`;
@@ -251,6 +236,7 @@ try {
   }
 
   function initHp() {
+    document.body.classList.add('hp');
     const [nav] = document.getElementsByTagName('nav');
     nav.insertAdjacentHTML('afterbegin', getNavBarLayout());
 
@@ -269,7 +255,6 @@ try {
             </a>`
     }).join('');
   }
-
 
   function loadData() {
     const script = document.createElement('script');
