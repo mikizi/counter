@@ -24,6 +24,16 @@ try {
 
   const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
 
+  function handleHeader({style}, device){
+    const headerEl = document.querySelector('header');
+    if(style && style[device]) {
+      const deviceStyle = style[device];
+      Object.keys(deviceStyle).forEach((prop)=>{
+        headerEl.style[prop] = deviceStyle[prop];
+      })
+    }
+  }
+
   function filterGates(gate) {
     if (!data.closedGates) {
       return;
@@ -186,6 +196,9 @@ try {
     printSummery();
 
     const device = isMobile() ? 'mobile' : 'desktop';
+    if(data.header) {
+      handleHeader(data.header, device);
+    }
     setHeaderImage(device);
 
     printCharts({
@@ -233,6 +246,7 @@ try {
                     }
                   }, 'gate-chart');
     }
+
   }
 
   function initHp() {
