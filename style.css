@@ -16,7 +16,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 50px;
-    font-size: 18px;
+    font-size: 1em;
     background: #232d33;
     color: white;
     border-bottom: 3px solid #ffde14;
@@ -24,9 +24,18 @@ body, html {
     opacity: 1;
 }
 
+.timer-wrp {
+    display: flex;
+}
+
+section.countdown > div {
+    margin: 0 10px;
+}
+
 .timer-title {
-    padding: 0 10px;
-    line-height: 18px;
+   /* padding: 0 10px;
+    line-height: 18px;*/
+    margin-left: 5px;
 }
 
 header {
@@ -119,12 +128,12 @@ article.grid-wrp {
     text-align: center;
 }
 
-div#last-update {
+/*div#last-update {
     border-radius: 10px;
     font-size: 0.8em;
     margin: 8px;
     direction: rtl;
-}
+}*/
 
 .external {
     position: absolute;
@@ -153,11 +162,15 @@ div#last-update {
         width: 90%;
     }
 
-    div#last-update {
+    /*div#last-update {
         position: absolute;
         bottom: 10px;
         right: 10px;
         padding: 5px;
+    }*/
+
+    .countdown {
+        font-size: 0.8em;
     }
 
     article.charts {
