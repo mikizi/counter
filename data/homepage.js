@@ -58,4 +58,9 @@ const data = [
     title: 'מכבי ת״א - מכבי נתניה',
     date: new Date(2022, 0, 22),
   },
+  {
+    name: 'm-haifa-h',
+    title: 'מכבי נתניה - מכבי חיפה',
+    date: new Date(2022, 0, 30),
+  },
 ];
