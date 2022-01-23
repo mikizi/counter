@@ -158,6 +158,7 @@ article.grid-wrp {
 
     .countdown {
         font-size: 0.7em;
+        height: 30px;
     }
 
     article.charts {
