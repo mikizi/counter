@@ -1,8 +1,32 @@
-body, html{
+body, html {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+.hide{
+    opacity: 0 !important;
+    height: 0 !important;
+}
+
+.countdown {
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 18px;
+    background: #232d33;
+    color: white;
+    border-bottom: 3px solid #ffde14;
+    border-top: 1px solid #3c4257;
+    opacity: 1;
+}
+
+.timer-title {
+    padding: 0 10px;
+    line-height: 18px;
 }
 
 header {
@@ -14,7 +38,7 @@ header {
 }
 
 
-main{
+main {
     margin: 0 auto;
     width: 100%;
 }
@@ -44,7 +68,7 @@ nav a.game {
     margin: 0;
 }
 
-nav a.game h2{
+nav a.game h2 {
     margin: 0;
     font-size: 0.9em;
     font-style: normal;
@@ -52,7 +76,7 @@ nav a.game h2{
     display: inline-block;
 }
 
-nav a.game .date{
+nav a.game .date {
     font-size: 0.8em;
     display: inline-block;
     font-weight: bold;
@@ -67,11 +91,11 @@ nav a.game .date{
     width: 38%;
 }
 
-.chart.total{
+.chart.total {
     width: 20%;
 }
 
-.chart.trend{
+.chart.trend {
     width: 38%;
 }
 
@@ -102,17 +126,13 @@ div#last-update {
     direction: rtl;
 }
 
-/*
-.data.trend {
-    position: relative;
-    bottom: -200px;
-    width: 100%;
-    margin: 0 auto;
-    height: 500px;
-}*/
+.external {
+    position: absolute;
+    top: 2000px;
+}
 
-@media (max-width: 640px){
-    header{
+@media (max-width: 640px) {
+    header {
         background-size: cover;
         background-attachment: inherit;
         background-position-y: center;
@@ -120,15 +140,15 @@ div#last-update {
         background-image: url("./assets/bg1.png");
     }
 
-    .hp header{
+    .hp header {
         height: 350px;
     }
 
     .grid-wrp, .chart.area, .chart.trend {
-        display: none ;
+        display: none;
     }
 
-    .chart.total{
+    .chart.total {
         display: block;
         width: 90%;
     }
@@ -140,7 +160,7 @@ div#last-update {
         padding: 5px;
     }
 
-    article.charts{
+    article.charts {
         justify-content: center;
     }
 }

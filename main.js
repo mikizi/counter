@@ -24,14 +24,50 @@ try {
 
   const labels = ['שם היציע', 'תכולת כסאות ביציע', 'כמות כסאות פנויים', 'כמה כרטיסים נמכרו'];
 
-  function handleHeader({style}, device){
+  function handleHeader({style}, device) {
     const headerEl = document.querySelector('header');
-    if(style && style[device]) {
+    if (style && style[device]) {
       const deviceStyle = style[device];
-      Object.keys(deviceStyle).forEach((prop)=>{
+      Object.keys(deviceStyle).forEach((prop) => {
         headerEl.style[prop] = deviceStyle[prop];
       })
     }
+  }
+
+  function setCountdown(countDownDate) {
+    const countdownEl = document.querySelector('.countdown');
+    const timerEl = countdownEl.querySelector('.timer');
+
+    const clear = setInterval(function () {
+
+      // Get today's date and time
+      const now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      const distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      const days = addLeadZero(Math.floor(distance / (1000 * 60 * 60 * 24)) || '');
+      const hours = addLeadZero(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) || '00');
+      const minutes = addLeadZero(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) || '00');
+      const seconds = addLeadZero(Math.floor((distance % (1000 * 60)) / 1000) || '00');
+
+      // Display the result in the element with id="demo"
+      timerEl.textContent = `${days ? days + ':': ''}${hours}:${minutes}:${seconds}`;
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(clear);
+        timerEl.textContent = '';
+      } else {
+        countdownEl.classList.remove('hide');
+      }
+    }, 1000);
+
+  }
+
+  function addLeadZero(number){
+    return number < 10 && number > 0 ? '0' + number : number;
   }
 
   function filterGates(gate) {
@@ -49,8 +85,12 @@ try {
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
       results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
+    if (!results) {
+      return null;
+    }
+    if (!results[2]) {
+      return '';
+    }
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
 
@@ -127,7 +167,7 @@ try {
   }
 
   function printData() {
-        new gridjs.Grid({
+    new gridjs.Grid({
                       columns: labels.reverse(),
                       data: res,
                       sort: true,
@@ -196,9 +236,11 @@ try {
     printSummery();
 
     const device = isMobile() ? 'mobile' : 'desktop';
-    if(data.header) {
+    if (data.header) {
       handleHeader(data.header, device);
     }
+
+    setCountdown(data.date);
     setHeaderImage(device);
 
     printCharts({
@@ -275,8 +317,8 @@ try {
 
     try {
       page = searchParams.get('p') || 'homepage';
-    }catch(ex){
-        page = getParameterByName('p') || 'homepage';
+    } catch (ex) {
+      page = getParameterByName('p') || 'homepage';
     }
     script.src = `data/${page}.js`;
 
@@ -284,7 +326,7 @@ try {
       init();
     };
 
-    if(location.href.indexOf('localhost') < 0) {
+    if (location.href.indexOf('localhost') < 0) {
       mixpanel.track('page view', {page});
     }
 
@@ -292,7 +334,7 @@ try {
   }
 
   loadData();
-}catch (ex){
+} catch (ex) {
   mixpanel.track('error', {error: ex.message, stack: ex.stack});
 }
 
