@@ -116,7 +116,6 @@ article.grid-wrp {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    position: relative;
 }
 
 .data-total div {
@@ -171,22 +170,22 @@ article.grid-wrp {
     }
 
     .ticket {
-        position: absolute;
+        position: fixed;
         height: 50px;
         width: 80px;
         background-color: #232d33;
         color: #ffde14;
-        bottom: -66px;
-        right: -18px;
+        bottom: 5px;
+        right: 5px;
         font-size: 12px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         border: 1px solid #ffcd00bd;
-        border-radius: 15px;
+        border-radius: 5px;
         padding: 0 5px;
-        transition: right 2s ease;
+        transition: right 1s;
         transition-delay: 1s;
     }
 }
