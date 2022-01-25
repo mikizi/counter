@@ -287,9 +287,11 @@ try {
                       }]
                     }
                   }, 'gate-chart');
+    }else{
+      orderTicket(data);
     }
 
-    orderTicket(data)
+
   }
 
   function orderTicket({link}){
