@@ -289,6 +289,17 @@ try {
                   }, 'gate-chart');
     }
 
+    orderTicket(data)
+  }
+
+  function orderTicket({link}){
+    const ticketEl = document.querySelector('.ticket');
+    ticketEl.classList.remove('slide');
+
+    ticketEl.addEventListener('click', ()=>{
+      mixpanel.track('conversion', {page, link});
+      window.location.href= link;
+    });
   }
 
   function initHp() {
