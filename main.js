@@ -290,8 +290,6 @@ try {
     }else{
       orderTicket(data);
     }
-
-
   }
 
   function orderTicket({link}){
