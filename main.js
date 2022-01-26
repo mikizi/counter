@@ -294,6 +294,9 @@ try {
 
   function orderTicket({link}){
     const ticketEl = document.querySelector('.ticket');
+    if(!link){
+      return;
+    }
     ticketEl.classList.remove('slide');
 
     ticketEl.addEventListener('click', ()=>{

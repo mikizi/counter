@@ -10,6 +10,31 @@ body, html {
     height: 0 !important;
 }
 
+.slide{
+    right: -100% !important;
+}
+
+.ticket {
+    position: fixed;
+    height: 50px;
+    width: 80px;
+    background-color: #232d33;
+    color: #ffde14;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ffcd00bd;
+    border-radius: 5px;
+    padding: 0 5px;
+    transition: right 1s;
+    transition-delay: 1s;
+}
+
+
 .countdown {
     transition: all 0.5s;
     display: flex;
@@ -163,29 +188,5 @@ article.grid-wrp {
 
     article.charts {
         justify-content: center;
-    }
-
-    .slide{
-        right: -100% !important;
-    }
-
-    .ticket {
-        position: fixed;
-        height: 50px;
-        width: 80px;
-        background-color: #232d33;
-        color: #ffde14;
-        bottom: 5px;
-        right: 5px;
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border: 1px solid #ffcd00bd;
-        border-radius: 5px;
-        padding: 0 5px;
-        transition: right 1s;
-        transition-delay: 1s;
     }
 }
