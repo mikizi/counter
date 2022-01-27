@@ -65,6 +65,11 @@ header {
     background-image: url("./assets/logo-counter.png");
 }
 
+.hp header{
+    background-position: right;
+    background-image: url("./assets/header-hp-dsktp.png");
+}
+
 
 main {
     margin: 0 auto;
@@ -165,6 +170,10 @@ article.grid-wrp {
         background-attachment: inherit;
         background-position-y: center;
         height: 180px;
+
+    }
+
+    .hp header{
         background-image: url("./assets/bg1.png");
     }
 
