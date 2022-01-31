@@ -11,5 +11,6 @@ var data = {
     mobile: "assets/games/h-b7-away.jpeg",
     desktop: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1006369.jpg?etag=9B408795EB2B22AF733C5753980FC599"
   },
+  link: 'https://www.leaan.co.il/he-IL/events/%d7%94%d7%a4%d7%95%d7%a2%d7%9c%20%d7%91\'%d7%a9%20-%20%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94/2022-2-5_19.50/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%d7%98%d7%95%d7%98%d7%95%20%d7%98%d7%a8%d7%a0%d7%a8%20%d7%91\'%d7%a9?hallmap',
   closedGates: []
 }
