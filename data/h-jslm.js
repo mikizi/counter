@@ -9,5 +9,5 @@ var data = {
     desktop: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1011515.jpg?etag=BE56273B86D1508E8E4762944E375273"
   },
   link: 'https://www.leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94%20-%20%d7%94%d7%a4%d7%95%d7%a2%d7%9c%20%d7%99%d7%a8%d7%95%d7%a9%d7%9c%d7%99%d7%9d/2022-2-12_15.00/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94?hallmap',
-  closedGates: [101,201,202]
+  closedGates: [101,201,202, 'כסף 105-R']
 }
