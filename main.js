@@ -358,7 +358,7 @@ try {
   }
 
   loadData();
-  registerSW().then(r => console.log('ServiceWorker loaded'));
+  //registerSW().then(r => console.log('ServiceWorker loaded'));
 
 } catch (ex) {
   mixpanel.track('error', {error: ex.message, stack: ex.stack});
