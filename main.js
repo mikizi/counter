@@ -347,7 +347,19 @@ try {
     document.head.appendChild(script);
   }
 
+  async function registerSW() {
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator.serviceWorker.register('sw.js');
+      } catch (e) {
+        console.log('ServiceWorker registration failed. Sorry about that.');
+      }
+    }
+  }
+
   loadData();
+  registerSW().then(r => console.log('ServiceWorker loaded'));
+
 } catch (ex) {
   mixpanel.track('error', {error: ex.message, stack: ex.stack});
 }
