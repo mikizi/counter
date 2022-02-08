@@ -1,7 +1,7 @@
 {
   "name": "הקאונטר",
   "short_name": "מכבי נתניה - הקאונטר",
-  "start_url": "counter",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#3367D6",
   "theme_color": "#3367D6",
