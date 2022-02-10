@@ -75,9 +75,10 @@ try {
       return;
     }
 
-    return (!data.awayMatch && gate > 500)
-           || gate.indexOf('תא תקשורת') > -1
-           || gate === 'E' || data.closedGates.some((cGate) => cGate == gate)
+    return data.closedGates.some((cGate) => cGate == gate)
+    /*return (!data.awayMatch && gate > 500)||
+     gate.indexOf('תא תקשורת') > -1||
+     gate === 'E' || data.closedGates.some((cGate) => cGate == gate)*/
 
   }
 
