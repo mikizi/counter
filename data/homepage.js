@@ -72,5 +72,10 @@ const data = [
     name: 'h-jslm',
     title: 'מכבי נתניה - הפועל ירושלים',
     date: new Date(2022, 1, 12),
+  },
+  {
+    name: 'm-pt-away',
+    title: 'מכבי נתניה - מכבי פ״ת',
+    date: new Date(2022, 1, 19, 15, 0, 0),
   }
 ];
