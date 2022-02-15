@@ -35,5 +35,6 @@ var data = {
     mobile: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1011540.jpg?etag=D9212EE0E49937ADAA0489CC11AD967D",
     desktop: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1011538.jpg?etag=23D960ED4905BE79CF6FC0A9D4CD5088"
   },
+  link: 'https://www.leaan.co.il/he-IL/events/%D7%9E%D7%9B%D7%91%D7%99%20%D7%A4\'%D7%AA%20-%20%D7%9E%D7%9B%D7%91%D7%99%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94/2022-2-19_15.00/%D7%90%D7%A6%D7%98%D7%93%D7%99%D7%95%D7%9F%20%D7%A9%D7%9C%D7%9E%D7%94%20%D7%91%D7%99%D7%98%D7%95%D7%97%20-%20%D7%94%D7%9E%D7%95%D7%A9%D7%91%D7%94?hallmap',
   closedGates: ['1', '2', '3', '4', '10', '13', '14']
 }
