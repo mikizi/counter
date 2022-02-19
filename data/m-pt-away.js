@@ -162,7 +162,7 @@ var data = {
   },
   overrideGateData: {
     '13': {
-      capacity: 800,
+      capacity: 1000,
       free: 9
     }
   },
