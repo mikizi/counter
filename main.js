@@ -126,7 +126,18 @@ try {
     setLastUpdate(date);
 
     values.forEach(area => {
-      const {capacity, name, free} = area;
+      const {name} = area;
+      let {capacity, free} = area;
+
+      if (data.overrideGateData) {
+        const overrideArea = data.overrideGateData[name];
+
+        if (overrideArea) {
+          capacity = overrideArea.capacity;
+          free = overrideArea.free;
+        }
+      }
+
       const taken = capacity - free;
 
       if (filterGates(name)) {
