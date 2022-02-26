@@ -8,6 +8,6 @@ var data = {
     mobile: "assets/games/k8.png",
     desktop: "assets/header-hp-dsktp.png"
   },
-  link: 'https://www.leaan.co.il/he-IL/events/%D7%9E%D7%9B%D7%91%D7%99%20%D7%A4\'%D7%AA%20-%20%D7%9E%D7%9B%D7%91%D7%99%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94/2022-2-19_15.00/%D7%90%D7%A6%D7%98%D7%93%D7%99%D7%95%D7%9F%20%D7%A9%D7%9C%D7%9E%D7%94%20%D7%91%D7%99%D7%98%D7%95%D7%97%20-%20%D7%94%D7%9E%D7%95%D7%A9%D7%91%D7%94?hallmap',
+  link: 'https://www.leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94%20-%20%d7%a2%d7%99%d7%a8%d7%95%d7%a0%d7%99%20%d7%a7%d7%a8%d7%99%d7%99%d7%aa%20%d7%a9%d7%9e%d7%95%d7%a0%d7%94/2022-3-5_17.30/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94?hallmap',
   closedGates: [501,502,503,504,505,506,507,508,509,601,602,603,604,605,606,607,608,609,101,102,201,202,'כסף 105-R']
 }
