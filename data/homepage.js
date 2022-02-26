@@ -82,5 +82,10 @@ const data = [
     name: 'ashdod-away',
     title: 'מ.ס אשדוד - מכבי נתניה',
     date: new Date(2022, 1, 26, 15, 0, 0)
+  },
+  {
+    name: 'k8',
+    title: 'מכבי נתניה - עירוני קריית שמונה',
+    date: new Date(2022, 2, 5, 17, 30, 0),
   }
 ];
