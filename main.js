@@ -188,7 +188,7 @@ try {
                       },
                       pagination: {
                         enabled: true,
-                        limit: 10
+                        limit: 20
                       }
                     }).render(document.getElementById("table-area"));
   }
