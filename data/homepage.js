@@ -87,5 +87,10 @@ const data = [
     name: 'k8',
     title: 'מכבי נתניה - עירוני קריית שמונה',
     date: new Date(2022, 2, 5, 17, 30, 0),
+  },
+  {
+    name: 'h-tlv-away',
+    title: 'הפועל תל אביב - מכבי נתניה',
+    date: new Date(2022, 2, 12, 19, 0, 0),
   }
 ];
