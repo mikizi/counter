@@ -150,6 +150,7 @@ article.grid-wrp {
 
 .data-total div {
     text-align: center;
+    padding: 1px;
 }
 
 /*div#last-update {
