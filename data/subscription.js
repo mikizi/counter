@@ -22,5 +22,6 @@ var data = {
       }
     }
   },
+  link: 'https://www.leaan.co.il/he-IL/subscriptions/%D7%97%D7%91%D7%99%D7%9C%D7%AA%20%D7%A4%D7%9C%D7%99%D7%99%D7%90%D7%95%D7%A3%20-%20%D7%9E%D7%9B%D7%91%D7%99%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94%2021-22?hallmap',
   closedGates: ['כסף 105-R']
 }
