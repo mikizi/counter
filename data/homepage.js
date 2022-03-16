@@ -1,7 +1,7 @@
 const data = [
   {
     name: 'subscription',
-    title: 'מנויים',
+    title: 'מנויים עונה סדירה (2774) + מיני מנוי פלייאוף',
   },
   {
     name: 'm-haifa',
