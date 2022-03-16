@@ -92,5 +92,10 @@ const data = [
     name: 'h-tlv-away',
     title: 'הפועל תל אביב - מכבי נתניה',
     date: new Date(2022, 2, 12, 19, 0, 0),
-  }
+  },
+  {
+    name: 'h-b7-away-2',
+    title: 'הפועל ב"ש - מכבי נתניה',
+    date: new Date(2022, 2, 19),
+  },
 ];
