@@ -98,4 +98,9 @@ const data = [
     title: 'הפועל ב"ש - מכבי נתניה',
     date: new Date(2022, 2, 19),
   },
+  {
+    name: 'm-tlv-2',
+    title: 'מכבי נתניה - מכבי ת״א',
+    date: new Date(2022, 3, 4),
+  },
 ];
