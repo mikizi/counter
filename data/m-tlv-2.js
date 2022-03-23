@@ -14,11 +14,8 @@ var data = {
   header: {
     style: {
       mobile: {
-        height: '235px'
-      },
-      desktop: {
-        height: '350px',
-        backgroundPosition: 'center'
+        height: '250px',
+        backgroundPositionY: 'bottom'
       }
     }
   },
