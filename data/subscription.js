@@ -39,7 +39,7 @@ var data = {
     }
   ],
   bg: {
-    mobile: "https://scontent.fhfa2-2.fna.fbcdn.net/v/t39.30808-6/275768277_5018637954869004_6142140156747438372_n.jpg?stp=dst-jpg_s640x640&_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=EGoGKOXUVMQAX-z34MO&_nc_ht=scontent.fhfa2-2.fna&oh=00_AT-c-JcyWPakkxIYHq-j4UXTV77W8ZF2G7oPGNvVGcSWvg&oe=623686B7",
+    mobile: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1012876.jpg?etag=A40B6C1DCA96CE12AD75CF5EA76118E7",
     desktop: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1011401.jpg?etag=AF92946580C46D025EAAEC3766C6B118"
   },
   header: {
