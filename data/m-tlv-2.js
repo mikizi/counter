@@ -60,7 +60,7 @@ var data = {
     }
   ],
   bg: {
-    mobile: "https://scontent.ftlv18-1.fna.fbcdn.net/v/t39.30808-6/276294811_5039709519428514_1503653831047054779_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=8JFZJKrDv6wAX-bJJYn&_nc_ht=scontent.ftlv18-1.fna&oh=00_AT8dZJenI5to4h52njAWk1mBJmXmeXprfnarpf6Q_spzjQ&oe=62482641",
+    mobile: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1007075.jpg?etag=F860464E18D465EB26803C9D31D63332",
     desktop: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1007073.jpg?etag=6ABC99ADDFB25DDAE779E643930BEBB8"
   },
   header: {
