@@ -108,4 +108,9 @@ const data = [
     title: 'בני סכנין - מכבי נתניה',
     date: new Date(2022, 3, 10),
   },
+  {
+    name: 'h-tlv-away-2',
+    title: 'הפועל תל אביב - מכבי נתניה',
+    date: new Date(2022, 3, 18, 20, 0, 0),
+  }
 ];
