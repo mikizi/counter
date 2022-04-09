@@ -17,6 +17,10 @@ var data = {
     {
       "date": "8.4.2022 15:44:18",
       "values": "[{\"id\":0,\"guid\":\"4e63c6ab-68ae-4c97-8c0b-c4ff136f7fa6\",\"name\":\"22,24\",\"type\":\"GeneralAdmission\",\"capacity\":1535,\"free\":1473,\"coords\":\"685,113,788,113,788,256,685,256,685,113\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"99d9a2e9-990e-e911-80d9-984be16723b6\",\"name\":\"אצטדיון דוחא\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"ad719724-24b6-4e4b-9e39-c31d5538c85b\":{\"letter\":\"a\",\"name\":\"קטגוריה 1\",\"displayStyle\":\"#3399ff\"}},\"oColor\":\"green\",\"priceLevels\":[\"ad719724-24b6-4e4b-9e39-c31d5538c85b\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"ad719724-24b6-4e4b-9e39-c31d5538c85b\":71}},\"middle\":{\"x\":736.499877929688,\"y\":184.500015258789}}]"
+    },
+    {
+      "date": "9.4.2022 9:53:34",
+      "values": "[{\"id\":0,\"guid\":\"4e63c6ab-68ae-4c97-8c0b-c4ff136f7fa6\",\"name\":\"22,24\",\"type\":\"GeneralAdmission\",\"capacity\":1535,\"free\":1473,\"coords\":\"685,113,788,113,788,256,685,256,685,113\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"99d9a2e9-990e-e911-80d9-984be16723b6\",\"name\":\"אצטדיון דוחא\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"ad719724-24b6-4e4b-9e39-c31d5538c85b\":{\"letter\":\"a\",\"name\":\"קטגוריה 1\",\"displayStyle\":\"#3399ff\"}},\"oColor\":\"green\",\"priceLevels\":[\"ad719724-24b6-4e4b-9e39-c31d5538c85b\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"ad719724-24b6-4e4b-9e39-c31d5538c85b\":71}},\"middle\":{\"x\":736.499877929688,\"y\":184.500015258789}}]"
     }
   ],
   bg: {
