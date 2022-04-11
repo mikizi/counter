@@ -8,7 +8,7 @@ var data = {
     }
   ],
   bg: {
-    mobile: "ahttps://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1008122.jpg?etag=4ECAC6FAB2281A9142F2991D70C06176",
+    mobile: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1008122.jpg?etag=4ECAC6FAB2281A9142F2991D70C06176",
     desktop: "https://www.leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1008120.jpg?etag=E68E4C07ABB52DA7650A6639B9FF70A1"
   },
   link: 'https://www.leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94%20-%20%d7%9e%d7%9b%d7%91%d7%99%20%d7%97%d7%99%d7%a4%d7%94/2022-4-23_17.30/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94?hallmap',
