@@ -8,7 +8,7 @@ var data = {
     }
   ],
   bg: {
-    mobile: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1011932.jpg?etag=694106BA1D6EA7272404D614C807FC3F",
+    mobile: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1011930.jpg?etag=F1607B32AAE95DFDBA7AC6CAD3C866B0",
     desktop: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1011930.jpg?etag=F1607B32AAE95DFDBA7AC6CAD3C866B0"
   },
   link: 'https://leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94%20-%20%d7%94%d7%a4%d7%95%d7%a2%d7%9c%20%d7%91\'%d7%a9/2022-5-1_20.15/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94?hallmap',
