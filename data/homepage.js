@@ -123,4 +123,9 @@ const data = [
     title: 'מכבי נתניה - הפועל באר שבע',
     date: new Date(2022, 4, 1)
   },
+  {
+    name: 'sakhnin-2',
+    title: 'מכבי נתניה - בני סכנין',
+    date: new Date(2022, 4, 40, 20, 30, 0),
+  }
 ];
