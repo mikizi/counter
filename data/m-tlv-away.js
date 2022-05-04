@@ -28,6 +28,6 @@ var data = {
       }
     }
   },
-  link: 'https://www.leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%aa\'%d7%90%20-%20%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94/2022-5-7_19.30/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%d7%a1%d7%9e%d7%99%20%d7%a2%d7%95%d7%a4%d7%a8%20-%20%d7%97%d7%99%d7%a4%d7%94/2?hallmap',
+  link: 'https://leaan.co.il/he-IL/events/%D7%9E%D7%9B%D7%91%D7%99%20%D7%AA\'%D7%90%20-%20%D7%9E%D7%9B%D7%91%D7%99%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94/2022-5-7_19.30/%D7%90%D7%A6%D7%98%D7%93%D7%99%D7%95%D7%9F%20%D7%A1%D7%9E%D7%99%20%D7%A2%D7%95%D7%A4%D7%A8%20-%20%D7%97%D7%99%D7%A4%D7%94/2?hallmap',
   closedGates: []
 }
