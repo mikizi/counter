@@ -112,8 +112,15 @@ try {
   }
 
   function handleData(index) {
-    const {date} = data.areas[index];
-    let {values} = data.areas[index];
+    const {areas, base} = data;
+    const {date} = areas[index];
+    let {values} = areas[index];
+
+    if(base) {
+      sum.capacity += base.capacity;
+      sum.free += base.free;
+      sum.counter += base.taken;
+    }
 
     if (!values) {
       values = data.areas;
@@ -370,7 +377,7 @@ try {
   }
 
   loadData();
-  registerSW().then(r => console.log('ServiceWorker loaded'));
+  registerSW().then(() => console.log('ServiceWorker loaded'));
 
 } catch (ex) {
   mixpanel.track('error', {error: ex.message, stack: ex.stack});
