@@ -165,6 +165,11 @@ article.grid-wrp {
     top: 2000px;
 }
 
+div#feed-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
 @media (max-width: 640px) {
     header {
         background-size: cover;
@@ -198,5 +203,10 @@ article.grid-wrp {
 
     article.charts {
         justify-content: center;
+    }
+
+    div#feed-container {
+        width: auto;
+        margin: 0 auto;
     }
 }

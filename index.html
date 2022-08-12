@@ -66,6 +66,25 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,600,300" rel="stylesheet" type="text/css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9571287278766889"
             crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({article:'auto'});
+        !function (e, f, u, i) {
+            if (!document.getElementById(i)){
+                e.async = 1;
+                e.src = u;
+                e.id = i;
+                f.parentNode.insertBefore(e, f);
+            }
+        }(document.createElement('script'),
+            document.getElementsByTagName('script')[0],
+            '//cdn.taboola.com/libtrc/counter-il/loader.js',
+            'tb_loader_script');
+        if(window.performance && typeof window.performance.mark == 'function')
+        {window.performance.mark('tbl_ic');}
+    </script>
+
 </head>
 <body>
 <a href="/"><header></header></a>
@@ -98,6 +117,16 @@
         <div id="table-total" class="data"></div>
         <div id="table-area" class="data"></div>
     </article>
+    <div id="feed-container"></div>
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({
+            mode: 'alternating-thumbnails-a',
+            container: 'feed-container',
+            placement: 'Below Article Thumbnails',
+            target_type: 'mix'
+        });
+    </script>
 </main>
 
 <div class="ticket slide">הזמנת כרטיסים</div>
