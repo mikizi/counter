@@ -1,0 +1,21 @@
+taboola.com,1482123,DIRECT,c228e6794e811952
+spotx.tv,71451,RESELLER
+spotxchange.com, 71451, RESELLER
+pubmatic.com, 156307, RESELLER, 5d62403b186f2ace
+appnexus.com, 3364, RESELLER
+indexexchange.com, 183756, RESELLER
+contextweb.com, 560382, RESELLER
+openx.com, 539154393, RESELLER
+tremorhub.com, z87wm, RESELLER, 1a4e959a1b50034a
+rubiconproject.com, 16698, RESELLER, 0bfd66d529a55807
+freewheel.tv, 799921, RESELLER
+smartadserver.com, 3563, RESELLER
+beachfront.com, 13749, RESELLER, e2541279e8e2ca4d
+emxdgt.com, 1643, RESELLER, 1e1d41537f7cad7f
+improvedigital.com, 1577, RESELLER
+video.unrulymedia.com, 1166984029, RESELLER
+smaato.com, 1100047487, RESELLER, 07bcf65f187117b4
+synacor.com, 82376, RESELLER, e108f11b2cdf7d5b
+sonobi.com, 9a1db44c9c, RESELLER, d1a215d9eb5aee9e
+yahoo.com, 59189, RESELLER
+aniview.com, 621cca388ba47d78a102e506, RESELLER, 78b21b97965ec3f8
