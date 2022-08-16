@@ -92,7 +92,7 @@ var data = {
     base: {
         capacity: soldout, //gatesCapacity.west.g_206 + gatesCapacity.west.g_206 ,
         free: 0,
-        taken: soldout,
+        taken: soldout - 330,
         date: new Date(2022, 7, 22)
     },
     link: 'https://www.leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94%20-%20%20%d7%91%d7%99%d7%aa\'%d7%a8%20%d7%99%d7%a8%d7%95%d7%a9%d7%9c%d7%99%d7%9d/2022-8-20_20.00/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94?hallmap',
