@@ -90,7 +90,7 @@ var data = {
         }
     },
     base: {
-        capacity: soldout, //gatesCapacity.west.g_206 + gatesCapacity.west.g_206 ,
+        capacity: soldout - 330, //gatesCapacity.west.g_206 + gatesCapacity.west.g_206 ,
         free: 0,
         taken: soldout - 330,
         date: new Date(2022, 7, 22)
