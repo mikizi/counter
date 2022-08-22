@@ -20,8 +20,13 @@ const data = [
         date: new Date(2022, 7, 20, 20, 0, 0),
     },
     {
+        name: 'm-haifa-a',
+        title: 'מכבי חיפה - מכבי נתניה',
+        date: new Date(2022, 7, 27, 20, 0, 0),
+    },
+    {
         name: 'h-tlv-h',
         title: 'מכבי נתניה - הפועל ת״א',
         date: new Date(2022, 8, 3, 20, 0, 0),
-    }
+    },
 ];
