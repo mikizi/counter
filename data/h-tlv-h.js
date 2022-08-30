@@ -41,7 +41,7 @@ var gatesCapacity = {
 
 var data = {
     title: 'מכבי נתניה - הפועל ת״א',
-    date: new Date(2022, 5, 9, 20, 15, 0),
+    date: new Date(2022, 8, 5, 20, 15, 0),
     areas: [
         {
             "date": "03.8.2022 22:00:16",
