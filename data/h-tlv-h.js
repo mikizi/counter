@@ -37,7 +37,19 @@ var gatesCapacity = {
         "g_105_L": 239,
         "g_105_R": 241
     }
-};
+}
+
+var soldout =  gatesCapacity.west.g_205 +
+    gatesCapacity.west.g_206 +
+    gatesCapacity.west.g_207 +
+    gatesCapacity.west.g_208 +
+    gatesCapacity.west.g_209 +
+    gatesCapacity.west.g_104 +
+    gatesCapacity.west.g_105_R +
+    gatesCapacity.west.g_105_C +
+    gatesCapacity.west.g_105_L +
+    gatesCapacity.west.g_106 +
+    gatesCapacity.west.g_107;
 
 var data = {
     title: 'מכבי נתניה - הפועל ת״א',
@@ -116,32 +128,9 @@ var data = {
         }
     },
     base: {
-        capacity:
-            gatesCapacity.west.g_205 +
-            gatesCapacity.west.g_206 +
-            gatesCapacity.west.g_207 +
-            gatesCapacity.west.g_208 +
-            gatesCapacity.west.g_209 +
-            gatesCapacity.west.g_104 +
-            gatesCapacity.west.g_105_R +
-            gatesCapacity.west.g_105_C +
-            gatesCapacity.west.g_105_L +
-            gatesCapacity.west.g_106 +
-            gatesCapacity.west.g_107
-        ,
+        capacity: soldout,
         free: 0,
-        counter:
-            gatesCapacity.west.g_205 +
-            gatesCapacity.west.g_206 +
-            gatesCapacity.west.g_207 +
-            gatesCapacity.west.g_208 +
-            gatesCapacity.west.g_209 +
-            gatesCapacity.west.g_104 +
-            gatesCapacity.west.g_105_R +
-            gatesCapacity.west.g_105_C +
-            gatesCapacity.west.g_105_L +
-            gatesCapacity.west.g_106 +
-            gatesCapacity.west.g_107
+        taken:soldout
     },
     link: 'https://www.leaan.co.il/he-IL/events/%d7%9e%d7%9b%d7%91%d7%99%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94%20-%20%d7%94%d7%a4%d7%95%d7%a2%d7%9c%20%d7%aa\'%d7%90/2022-9-3_20.00/%d7%90%d7%a6%d7%98%d7%93%d7%99%d7%95%d7%9f%20%20%d7%a0%d7%aa%d7%a0%d7%99%d7%94?hallmap',
     closedGates: []
