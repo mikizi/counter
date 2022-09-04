@@ -34,7 +34,6 @@ body, html {
     transition-delay: 1s;
 }
 
-
 .countdown {
     transition: all 0.5s;
     display: flex;
@@ -163,6 +162,10 @@ article.grid-wrp {
 .external {
     position: absolute;
     top: 2000px;
+}
+
+#table-area table {
+    width: 100%;
 }
 
 div#feed-container {
