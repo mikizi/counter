@@ -200,7 +200,7 @@ var data = {
 }
     ],
     bg: {
-        mobile: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1033/1013093.jpg?etag=D7B668432F2A21750210912845BA46E4",
+        mobile: "../assets/subs.jpeg",
         desktop: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1013091.jpg?etag=EA44EC59D78D05956D3C4725C6AB2FF8"
     },
     header: {
