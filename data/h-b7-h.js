@@ -57,10 +57,6 @@ var data = {
             mobile: {
                 height: '320px',
                 backgroundPositionY: 'bottom'
-            },
-            desktop: {
-                height: '480px',
-                backgroundColor: '#010309'
             }
         }
     },
