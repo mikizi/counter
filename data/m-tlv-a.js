@@ -49,8 +49,8 @@ var data = {
         }
     ],
     bg: {
-        mobile: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1037/1013086.jpg?etag=50E21E67C2958D289E6A895004CA23C6",
-        desktop: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1033/1013088.jpg?etag=AC741687A9B1F858066E36C538E6A9C0"
+        mobile: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1033/1013088.jpg?etag=AC741687A9B1F858066E36C538E6A9C0",
+        desktop: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1037/1013086.jpg?etag=50E21E67C2958D289E6A895004CA23C6"
     },
     header: {
         style: {
@@ -59,8 +59,9 @@ var data = {
                 backgroundPositionY: 'bottom'
             },
             desktop: {
-                height: '480px',
-                backgroundColor: '#010309'
+                height: '380px',
+                backgroundColor: '#010309',
+                backgroundPosition: 'right top'
             }
         }
     },
