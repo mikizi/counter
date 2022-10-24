@@ -98,8 +98,12 @@ var data = {
         {
             "date": "24.10.2022 19:06:33",
             "values": "[{\"id\":0,\"guid\":\"b550c5ca-db81-e911-80dd-984be16723b6\",\"name\":\"316\",\"type\":\"ReservedSeating\",\"capacity\":704,\"free\":113,\"coords\":\"472,259,469,289,444,285,445,282,440,281,440,285,431,283,431,280,421,279,423,261,433,262,433,258,443,258,442,262,447,262,447,258,472,259\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"b9a3662b-3981-e911-80dd-984be16723b6\",\"name\":\"בלומפילד - תל אביב\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"1f5203de-a860-ec11-80e7-984be16723b6\":{\"letter\":\"a\",\"name\":\"קבוצה אורחת\",\"displayStyle\":\"#0033ff\"}},\"isBlocked\":false,\"oColor\":\"yellow\",\"priceLevels\":[\"1f5203de-a860-ec11-80e7-984be16723b6\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":71}},\"middle\":{\"x\":448.346954345703,\"y\":272.015502929688},\"priceLevelsAvailability\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":113}}]"
+        },
+        {
+            "date": "24.10.2022 20:05:02",
+            "values": "[{\"id\":0,\"guid\":\"b550c5ca-db81-e911-80dd-984be16723b6\",\"name\":\"316\",\"type\":\"ReservedSeating\",\"capacity\":704,\"free\":76,\"coords\":\"472,259,469,289,444,285,445,282,440,281,440,285,431,283,431,280,421,279,423,261,433,262,433,258,443,258,442,262,447,262,447,258,472,259\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"b9a3662b-3981-e911-80dd-984be16723b6\",\"name\":\"בלומפילד - תל אביב\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"1f5203de-a860-ec11-80e7-984be16723b6\":{\"letter\":\"a\",\"name\":\"קבוצה אורחת\",\"displayStyle\":\"#0033ff\"}},\"isBlocked\":false,\"oColor\":\"red\",\"priceLevels\":[\"1f5203de-a860-ec11-80e7-984be16723b6\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":71}},\"middle\":{\"x\":448.346954345703,\"y\":272.015502929688},\"priceLevelsAvailability\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":76}}]"
         }
-        
+
     ],
     bg: {
         mobile: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1033/1013088.jpg?etag=AC741687A9B1F858066E36C538E6A9C0",
