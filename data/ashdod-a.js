@@ -50,10 +50,14 @@ var data = {
         {
             "date": "9.11.2022 10:45:47",
             "values": "[{\"id\":0,\"guid\":\"e6adf93a-5a3e-4146-a458-4bdcb4a9bf1a\",\"name\":\"גוש י\",\"type\":\"ReservedSeating\",\"capacity\":764,\"free\":697,\"coords\":\"490,151,490,228,546,228,558,152,490,151\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"45f43ce5-8edd-40d7-879d-7bf0b5b2ca17\",\"name\":\"איצטדיון הי\\\"א באשדוד\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"1f5203de-a860-ec11-80e7-984be16723b6\":{\"letter\":\"a\",\"name\":\"קבוצה אורחת\",\"displayStyle\":\"#0033ff\"}},\"isBlocked\":false,\"oColor\":\"green\",\"priceLevels\":[\"1f5203de-a860-ec11-80e7-984be16723b6\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":71}},\"middle\":{\"x\":521.036376953125,\"y\":188.508361816406},\"priceLevelsAvailability\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":697}}]"
+        },
+        {
+            "date": "9.11.2022 15:14:27",
+            "values": "[{\"id\":0,\"guid\":\"e6adf93a-5a3e-4146-a458-4bdcb4a9bf1a\",\"name\":\"גוש י\",\"type\":\"ReservedSeating\",\"capacity\":764,\"free\":689,\"coords\":\"490,151,490,228,546,228,558,152,490,151\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"45f43ce5-8edd-40d7-879d-7bf0b5b2ca17\",\"name\":\"איצטדיון הי\\\"א באשדוד\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"1f5203de-a860-ec11-80e7-984be16723b6\":{\"letter\":\"a\",\"name\":\"קבוצה אורחת\",\"displayStyle\":\"#0033ff\"}},\"isBlocked\":false,\"oColor\":\"green\",\"priceLevels\":[\"1f5203de-a860-ec11-80e7-984be16723b6\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":71}},\"middle\":{\"x\":521.036376953125,\"y\":188.508361816406},\"priceLevelsAvailability\":{\"1f5203de-a860-ec11-80e7-984be16723b6\":689}}]"
         }
     ],
     bg: {
-        mobile: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1033/1012730.jpg?etag=8AF649722521B5B2D4A9AB8FAD683DF5",
+        mobile: "https://shefa.seatgeekenterprise.com/weblink/1731/get.resource/images/1033/1003555.png?etag=5C28415C9729EC7704F002E4D53F2973",
         desktop: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1037/1012728.jpg?etag=6F35A980F45CC6E7D52AF751B0DB812D"
     },
     header: {
