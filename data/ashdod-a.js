@@ -58,7 +58,7 @@ var data = {
     ],
     bg: {
         mobile: "https://shefa.seatgeekenterprise.com/weblink/1731/get.resource/images/1033/1003555.png?etag=5C28415C9729EC7704F002E4D53F2973",
-        desktop: "https://shefa.seatgeekenterprise.com/weblink/1731/get.resource/images/1033/1003555.png?etag=5C28415C9729EC7704F002E4D53F2973"
+        desktop: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1037/1012728.jpg?etag=6F35A980F45CC6E7D52AF751B0DB812D"
     },
     header: {
         style: {
