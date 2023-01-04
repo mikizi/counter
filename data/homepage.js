@@ -64,5 +64,10 @@ const data = [
         name: 'ashdod-a',
         title: 'מ.ס אשדוד - מכבי נתניה',
         date: new Date(2022, 10, 12, 15, 0, 0),
+    },
+    {
+        name: 'sakhnin-h',
+        title: 'מכבי נתניה - בני סכנין',
+        date: new Date(2023, 0, 7, 15, 0, 0),
     }
 ];
