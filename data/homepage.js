@@ -69,5 +69,11 @@ const data = [
         name: 'sakhnin-h',
         title: 'מכבי נתניה - בני סכנין',
         date: new Date(2023, 0, 7, 15, 0, 0),
+    },
+    {
+        name: 'toto-final',
+        title: 'מכבי נתניה - הפועל ב"ש',
+        date: new Date(2023, 0, 18, 20, 0, 0),
+
     }
 ];
