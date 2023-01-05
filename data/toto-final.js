@@ -16,6 +16,9 @@ var data = {
             mobile: {
                 height: '250px',
                 backgroundPositionY: 'bottom'
+            },
+            desktop: {
+                height: '420px',
             }
         }
     },
