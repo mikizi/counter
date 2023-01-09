@@ -5,7 +5,11 @@ var data = {
         {   
             "date": "8.1.2023 21:42:49",
             "values": "[{\"id\":0,\"guid\":\"beaf28a5-e382-4f18-837f-3a26b3af7320\",\"name\":\"11\",\"type\":\"ReservedSeating\",\"capacity\":1956,\"free\":383,\"coords\":\"253,46,286,46,288,44,291,42,294,41,298,40,302,40,307,41,310,45,345,45,345,114,253,114,253,46\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"719dc3f1-9e8d-4700-9ae0-e75b51be67d3\",\"name\":\"אצטדיון שלמה ביטוח, פתח תקוה\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"d7188336-52bc-e611-80be-984be16723b4\":{\"letter\":\"a\",\"name\":\"המושבה - מזרחי\",\"displayStyle\":\"#cc99cc\"}},\"isBlocked\":false,\"oColor\":\"yellow\",\"priceLevels\":[\"d7188336-52bc-e611-80be-984be16723b4\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"d7188336-52bc-e611-80be-984be16723b4\":60}},\"middle\":{\"x\":299.155364990234,\"y\":79.2004776000977},\"priceLevelsAvailability\":{\"d7188336-52bc-e611-80be-984be16723b4\":383}}]"
-        }
+        },
+        {
+    "date": "9.1.2023 17:30:06",
+    "values": "[{\"id\":0,\"guid\":\"beaf28a5-e382-4f18-837f-3a26b3af7320\",\"name\":\"11\",\"type\":\"ReservedSeating\",\"capacity\":1956,\"free\":267,\"coords\":\"253,46,286,46,288,44,291,42,294,41,298,40,302,40,307,41,310,45,345,45,345,114,253,114,253,46\",\"view\":null,\"boundries\":{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0},\"soldOut\":false,\"backgroundImage\":{\"url\":\"\",\"width\":0,\"height\":0},\"stagePosition\":\"TOP\",\"hall\":{\"stageImage\":null,\"id\":\"719dc3f1-9e8d-4700-9ae0-e75b51be67d3\",\"name\":\"אצטדיון שלמה ביטוח, פתח תקוה\"},\"displayStyles\":{\"o\":{\"name\":\"מכור\",\"displayStyle\":\"#000066\"},\"c\":{\"name\":\"נתפס בידי\",\"displayStyle\":\"#33cc00\"},\"d7188336-52bc-e611-80be-984be16723b4\":{\"letter\":\"a\",\"name\":\"המושבה - מזרחי\",\"displayStyle\":\"#cc99cc\"}},\"isBlocked\":false,\"oColor\":\"red\",\"priceLevels\":[\"d7188336-52bc-e611-80be-984be16723b4\"],\"priceList\":{\"9071b182-b426-4dad-9af8-e23a20a17807\":{\"d7188336-52bc-e611-80be-984be16723b4\":60}},\"middle\":{\"x\":299.155364990234,\"y\":79.2004776000977},\"priceLevelsAvailability\":{\"d7188336-52bc-e611-80be-984be16723b4\":267}}]"
+}
         
     ],
     bg: {
