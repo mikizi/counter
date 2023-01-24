@@ -75,5 +75,11 @@ const data = [
         title: 'מכבי נתניה - הפועל ב"ש',
         date: new Date(2023, 0, 18, 20, 0, 0),
 
+    },
+    {
+        name: 'nes-ziona-h',
+        title: 'מכבי נתניה - סקציה נס ציונה',
+        date: new Date(2023, 0, 28, 18, 0, 0),
+
     }
 ];
