@@ -80,6 +80,10 @@ const data = [
         name: 'nes-ziona-h',
         title: 'מכבי נתניה - סקציה נס ציונה',
         date: new Date(2023, 0, 28, 18, 0, 0),
-
+    },
+    {
+        name: 'm-haifa-cup-h',
+        title: 'מכבי נתניה - מכבי חיפה',
+        date: new Date(2023, 0, 31, 20, 30, 0),
     }
 ];
