@@ -95,5 +95,10 @@ const data = [
         name: 'h-hadera-h',
         title: 'מכבי נתניה - הפועל חדרה',
         date: new Date(2023, 1, 25, 19, 0, 0),
+    },
+    {
+        name: 'm-haifa-cup-a',
+        title: 'מכבי חיפה - מכבי נתניה',
+        date: new Date(2023, 1, 28, 20, 30, 0),
     }
 ];
