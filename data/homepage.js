@@ -100,5 +100,9 @@ const data = [
         name: 'm-haifa-cup-a',
         title: 'מכבי חיפה - מכבי נתניה',
         date: new Date(2023, 1, 28, 20, 30, 0),
+    },{
+        name: 'ashdod-h',
+        title: 'מכבי נתניה - מ.ס.ע. אשדוד',
+        date: new Date(2023, 2, 11, 19, 30, 0),
     }
 ];
