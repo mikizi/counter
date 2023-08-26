@@ -41,7 +41,7 @@ var gatesCapacity = {
 
 var data = {
     title: 'מכבי נתניה - מכבי בני ריינה',
-    date: new Date(2023, 7, 28, 20, 0, 0),
+    date: new Date(2023, 7, 26, 20, 0, 0),
     areas: [
         {
                 "date": "26.8.2023 19:22:08",
