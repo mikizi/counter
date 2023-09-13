@@ -50,7 +50,7 @@ var data = {
     ],
     bg: {
         mobile: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1033/1015215.jpg?etag=7D7C036916E3F7CB2107D242B89A2A7A",
-        desktop: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1037/1015123.jpg?etag=02A64ED1AC317AE91D092B709C4C18B1"
+        desktop: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1037/1015213.jpg?etag=02B3F356C8AF04ACF74EA09C81CE8460"
     },
     header: {
         style: {
