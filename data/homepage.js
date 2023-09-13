@@ -5,7 +5,7 @@ const data = [
         date: new Date(2023, 7, 28, 20, 0, 0),
     },
     {
-        name: 'hapoel-p"t-h',
+        name: 'hapoel-pt-h',
         title: 'מכבי נתניה - הפועל פתח תקווה',
         date: new Date(2023, 8, 17, 20, 0, 0),
     }
