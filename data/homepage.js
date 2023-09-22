@@ -8,5 +8,10 @@ const data = [
         name: 'hapoel-pt-h',
         title: 'מכבי נתניה - הפועל פתח תקווה',
         date: new Date(2023, 8, 17, 20, 0, 0),
-    }
+    },
+    {
+      name: 'hapoel-jerusalem-a',
+      title: 'הפועל ירושלים - מכבי נתניה',
+      date: new Date(2023, 8, 23)
+    }  
 ];
