@@ -10,11 +10,6 @@ const data = [
         date: new Date(2023, 8, 17, 20, 0, 0),
     },
     {
-      name: 'hapoel-jerusalem-a',
-      title: 'הפועל ירושלים - מכבי נתניה',
-      date: new Date(2023, 8, 23)
-    },
-    {
         name: 'm-haifa-h',
         title: 'מכבי נתניה - מכבי חיפה',
         date: new Date(2023, 9, 1)
