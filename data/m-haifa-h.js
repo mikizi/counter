@@ -41,7 +41,7 @@ var gatesCapacity = {
 
 var data = {
     title: 'מכבי נתניה - מכבי חיפה',
-    date: new Date(2023, 9, 1, 20, 0, 0),
+    date: new Date(2023, 9, 1, 20, 15, 0),
     areas: [
             {
                 "date": "26.9.2023 18:17:49",
