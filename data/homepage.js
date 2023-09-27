@@ -2,7 +2,7 @@ const data = [
     {
         name: 'subscription',
         title: 'מנויים',
-        date: new Date(2023, 6, 0, 0, 0, 0),
+        
     },
     {
         name: 'bney-reyna-h',
