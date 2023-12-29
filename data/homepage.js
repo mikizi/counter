@@ -18,5 +18,10 @@ const data = [
         name: 'm-haifa-h',
         title: 'מכבי נתניה - מכבי חיפה',
         date: new Date(2023, 9, 1)
+    },
+    {
+    name: 'hadera-a',
+    title: 'מכבי נתניה - מכבי חיפה',
+    date: new Date(2023, 11, 30)
     }
 ];
