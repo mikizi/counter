@@ -41,7 +41,7 @@ var gatesCapacity = {
 
 var data = {
     title: 'הפועל חדרה - מכבי נתניה',
-    date: new Date(2023, 30, 11, 18, 0, 0),
+    date: new Date(2023, 11, 30, 18, 0, 0),
     areas: [
             {
                 
