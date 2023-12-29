@@ -21,7 +21,7 @@ const data = [
     },
     {
     name: 'hadera-a',
-    title: 'מכבי נתניה - מכבי חיפה',
+    title: 'הפועל חדרה - מכבי נתניה',
     date: new Date(2023, 11, 30)
     }
 ];
