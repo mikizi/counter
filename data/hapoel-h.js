@@ -39,24 +39,7 @@ var gatesCapacity = {
     }
 }
 
-var soldout =   gatesCapacity.west.g_201 +
-    gatesCapacity.west.g_202 +
-    gatesCapacity.west.g_205 +
-    gatesCapacity.west.g_206 +
-    gatesCapacity.west.g_207 +
-    gatesCapacity.west.g_208 +
-    gatesCapacity.west.g_209 +
-    gatesCapacity.west.g_101 +
-    gatesCapacity.west.g_102 +
-    gatesCapacity.west.g_103 +
-    gatesCapacity.west.g_104 +
-    gatesCapacity.west.g_105_R +
-    gatesCapacity.west.g_105_C +
-    gatesCapacity.west.g_105_L +
-    gatesCapacity.west.g_106 +
-    gatesCapacity.west.g_107 +
-    gatesCapacity.west.g_108 +
-    gatesCapacity.west.g_109
+
 
 var data = {
     title: 'מכבי נתניה - הפועל ת״א',
