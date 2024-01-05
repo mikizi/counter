@@ -73,7 +73,7 @@ var data = {
     ],
     bg: {
         mobile: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1033/1007544.jpg?etag=8EC429FB646EA0F5000631A6B08654BB",
-        desktop: "https://leaan.co.il/LeanWebLink/1159/get.resource/images/1037/1007542.jpg?etag=68892006FCD7715D8673AF68D85D9F9A"
+        desktop: "https://leaan.seatgeekenterprise.com/weblink/1159/get.resource/images/1037/1007542.jpg?etag=17E5049DA0648BEE40BA876A9429ADCB"
     },
     header: {
         style: {
