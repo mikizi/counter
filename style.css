@@ -213,3 +213,9 @@ div#feed-container {
         margin: 0 auto;
     }
 }
+
+a.game:first-of-type {
+    color: #a30202;
+    font-size: larger;
+    font-weight: bolder;
+}

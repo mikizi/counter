@@ -1,5 +1,10 @@
 const data = [
     {
+        name: 'bring-them-back-home-now',
+        title: 'תחזירו אותם הביתה עכשיו',
+        date: new Date(2023,9,7)
+    },
+    {
         name: 'subscription',
         title: 'מנויים',
         
@@ -33,5 +38,5 @@ const data = [
         name: 'h-jerusalem-h',
         title: 'מכבי נתניה -הפועל ירושלים',
         date: new Date(2024,0,16)
-    }
+    },
 ];
