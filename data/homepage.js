@@ -40,7 +40,7 @@ const data = [
         date: new Date(2024,0,16)
     },
     { 
-        name: 'm-haifa-a.js',
+        name: 'm-haifa-a',
       title: 'מכבי חיפה - מכבי נתניה',
       date: new Date(2024,0,21)
     }
