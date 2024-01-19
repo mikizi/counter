@@ -41,7 +41,7 @@ const data = [
     },
     { 
         name: 'm-haifa-a',
-      title: 'מכבי חיפה - מכבי נתניה',
-      date: new Date(2024,0,21)
+        title: 'מכבי חיפה - מכבי נתניה',
+        date: new Date(2024,0,21)
     }
 ];
