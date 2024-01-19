@@ -39,4 +39,8 @@ const data = [
         title: 'מכבי נתניה -הפועל ירושלים',
         date: new Date(2024,0,16)
     },
+    { 
+        name: 'm-haifa-a.js',
+      title: 'מכבי חיפה - מכבי נתניה',
+      date: new Date(2024,0,21)}
 ];
