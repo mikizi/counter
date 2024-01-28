@@ -47,6 +47,6 @@ const data = [
     {
         name: 'bnei-sahnin-h',
         title: 'מכבי נתניה - בני סכנין',
-        date: new Date(2024,0,21)
+        date: new Date(2024,0,30)
     }
 ];
