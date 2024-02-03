@@ -49,9 +49,5 @@ const data = [
         title: 'מכבי נתניה - בני סכנין',
         date: new Date(2024,0,30)
     },
-    {
-        name: 'm-pt-h',
-        title: 'מכבי נתניה - מכבי פתח תקווה',
-        date: new Date(2024,1,3)
-    }
+
 ];
