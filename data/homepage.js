@@ -25,9 +25,9 @@ const data = [
         date: new Date(2023, 9, 1)
     },
     {
-    name: 'hadera-a',
-    title: 'הפועל חדרה - מכבי נתניה',
-    date: new Date(2023, 11, 30)
+        name: 'hadera-a',
+        title: 'הפועל חדרה - מכבי נתניה',
+        date: new Date(2023, 11, 30)
     },
     {
          name: 'hapoel-h',
