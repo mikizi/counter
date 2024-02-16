@@ -53,6 +53,6 @@ const data = [
         name: 'm-ta-h',
         title: 'מכבי נתניה - מכבי תל אביב',
         date: new Date(2024,1,19)
-    },
+    }
 
 ];
