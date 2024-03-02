@@ -55,7 +55,7 @@ const data = [
         date: new Date(2024,1,19)
     },
     {
-        name: 'h-jeruslam-c',
+        name: 'h-jerusalem-c',
         title: 'מכבי נתניה -הפועל ירושלים',
         date: new Date (2024, 2, 5)
     }
