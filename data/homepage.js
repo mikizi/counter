@@ -60,7 +60,7 @@ const data = [
         date: new Date (2024, 2, 5)
     },
     {
-        name: 'h - hadera -h',
+        name: 'h-hadera-h.js',
         title: 'מכבי נתניה - הפועל חדרה',
         date: new Date (2024, 2, 16)
     }
