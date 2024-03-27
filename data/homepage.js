@@ -63,6 +63,11 @@ const data = [
         name: 'h-hadera-h',
         title: 'מכבי נתניה - הפועל חדרה',
         date: new Date (2024, 2, 16)
+    },
+    {
+        name: 'betiar-js-h-po',
+        title: 'מכבי נתניה - ביתר ירושלים',
+        date: new Date(2024,2,31)
     }
 
 ];
