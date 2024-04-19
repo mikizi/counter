@@ -41,7 +41,7 @@ var gatesCapacity = {
 
 var data = {
     title: 'מכבי נתניה - הפועל ירושלים',
-    date: new Date(2024, 3, 18, 0, 0, 0),
+    date: new Date(2024, 3 ,20, 18, 0, 0),
     areas: [
         {
             "date": "15.4.2024 19:01:13",
