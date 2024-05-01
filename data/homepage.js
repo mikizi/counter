@@ -73,6 +73,11 @@ const data = [
         name: 'h-jeruslam-h-po',
         title: 'מכבי נתניה - הפועל ירושלים',
         date: new Date(2024,3,20)
+    },
+    {
+        name: 'h-ta-h-po',
+        title: 'מכבי נתניה - הפועל ירושלים',
+        date: new Data(2024,4,4)
     }
 
 ];
